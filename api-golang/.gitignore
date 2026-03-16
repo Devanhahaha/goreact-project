@@ -1,0 +1,22 @@
+# Environment
+.env
+
+# Temporary
+tmp/
+
+# VSCode
+.vscode/
+
+# Go build files
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+
+# Logs
+*.log
+
+# Coverage
+coverage.out
