@@ -28,6 +28,15 @@ import UserCreate from "../views/admin/users/create";
 // import users update
 import UserUpdate from "../views/admin/users/update";
 
+// import product index
+import ProductIndex from "../views/admin/products";
+
+// import product create
+import ProductCreate from "../views/admin/products/create";
+
+// import product update
+import ProductUpdate from "../views/admin/products/update";
+
 export default function AppRoutes() {
 
     // menggunakan use context untuk mendapatkan nilai dari AuthContext
@@ -69,6 +78,21 @@ export default function AppRoutes() {
             {/* User Update*/}
             <Route path="/admin/users/edit/:id" element={
                 isAuthenticated ? <UserUpdate /> : <Navigate to="/login" replace /> 
+            } />
+
+            {/* Product Index */}
+            <Route path="/admin/products" element={
+                isAuthenticated ? <ProductIndex /> : <Navigate to="/login" replace /> 
+            } />
+
+            {/* Product Create */}
+            <Route path="/admin/products/create" element={
+                isAuthenticated ? <ProductCreate /> : <Navigate to="/login" replace /> 
+            } />
+
+            {/* Product Update */}
+            <Route path="/admin/products/edit/:id" element={
+                isAuthenticated ? <ProductUpdate /> : <Navigate to="/login" replace /> 
             } />
         </Routes>
     )

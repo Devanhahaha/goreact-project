@@ -32,6 +32,13 @@ export default function Sidebar() {
                         Users
                     </Link>
 
+                    <Link
+                        to="/admin/products"
+                        className="px-4 py-2 rounded-lg text-gray-700 hover:bg-amber-100 hover:text-amber-700 transition duration-200"
+                    >
+                        Products
+                    </Link>
+
                     <button
                         type="button" onClick={logout}
                         className="text-left px-4 py-2 rounded-lg text-red-600 hover:bg-red-100 transition duration-200 cursor-pointer"

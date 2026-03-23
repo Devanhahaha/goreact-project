@@ -43,6 +43,9 @@ func TranslateErrorMessage(err error) map[string]string {
 		if strings.Contains(err.Error(), "username") {
 			errorsMap["username"] = "Username already exists" // Pesan error jika username sudah ada
 		}
+		if strings.Contains(err.Error(), "name") {
+			errorsMap["name"] = "Product Name already exists" // Pesan error jika nama product sudah ada
+		}
 		if strings.Contains(err.Error(), "email") {
 			errorsMap["email"] = "Email already exists" // Pesan error jika email sudah ada
 		}

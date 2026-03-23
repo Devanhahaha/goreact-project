@@ -49,5 +49,20 @@ func SetupRoutes() *gin.Engine {
 	// router delete user
 	router.DELETE("/api/users/:id", middlewares.AuthMiddleware(), controllers.DeleteUser)
 
+	// router get product
+	router.GET("/api/products", middlewares.AuthMiddleware(), controllers.FindProducts)
+
+	// router get product by id
+	router.GET("/api/products/:id", middlewares.AuthMiddleware(), controllers.FindProductById)
+
+	// router create product
+	router.POST("/api/products", middlewares.AuthMiddleware(), controllers.CreateProducts)
+
+	// router update product
+	router.PUT("/api/products/:id", middlewares.AuthMiddleware(), controllers.UpdateProduct)
+
+	// router delete product
+	router.DELETE("/api/products/:id", middlewares.AuthMiddleware(), controllers.DeleteProduct)
+
 	return router
 }
